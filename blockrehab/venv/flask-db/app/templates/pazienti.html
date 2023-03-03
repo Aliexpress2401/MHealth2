@@ -1,0 +1,41 @@
+{% block content %}
+
+
+    <ul>
+       
+        <h3>Patients</h3>
+        {% for patient in patients%}
+        <li> <strong>Firstname: </strong>{{ patient.firstname }}<br></li>
+        <li> <strong>Lastname: </strong>{{ patient.lastname }}<br></li>
+        <li> <strong>Address: </strong>{{ patient.address }}<br></li>
+        <li> <strong>Email: </strong>{{ patient.email }}<br></li>
+        <li> <strong>Date:</strong>{{ patient.date }}<br></li>
+        <br>
+        <br>
+        {% endfor %}
+        <h3>Doctor</h3>
+        {% for doctor in doctors %}
+        <li> <strong>Name: </strong>{{ doctor.name }}<br></li>
+        <li> <strong>Username: </strong>{{ doctor.username }}<br></li>
+        <li> <strong>Password: </strong>{{ doctor.password }}<br></li>
+        <li> <strong>Digital signature: </strong>{{ doctor.firmadig }}<br></li>
+        
+        <br>
+        <br>
+        {% endfor %}
+        <h3>Messages</h3>
+        {% for message in messages %}
+      
+        <li> <strong>Username: </strong>{{ message.username }}<br></li>
+        <li> <strong>Email: </strong>{{ message.email }}<br></li>
+        <li> <strong>Message: </strong>{{ message.message }}<br></li>
+        
+        <br>
+        <br>
+        {% endfor %}
+            
+    
+    </ul>
+
+
+{% endblock %}
